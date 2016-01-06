@@ -9,18 +9,19 @@ def getNext(password):
     >>> getNext('bc')
     'bd'
     """
-    pwd = list(password)  #1
+    pwd = list(password)  #1) On transforme, dans la variable pwd, la variable password en une liste
     found = False
     i=len(pwd)-1
 
     while not found:
         if pwd[i] < 'z':
-           pwd[i] = chr(ord(pwd[i])+1)  #2
-           found = True             
+           pwd[i] = chr(ord(pwd[i])+1)  #2) La lettre va être modifiée par la lettre suivante de l'alphabet 
+           found = True
         else:
-           i = i-1 
+           pwd[i-1] = chr(ord(pwd[i-1])+1)
+           pwd[i] = chr(ord(pwd[i])-26)
     
-    return ''.join(pwd) #3
+    return ''.join(pwd) #3) La méthode retourne la variable pwd remise sous forme de chaine de caractère
 
 
 
