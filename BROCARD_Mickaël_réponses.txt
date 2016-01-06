@@ -1,3 +1,4 @@
 BROCARD Mickaël
 
 1.4)  S'il y a plusieurs 'z' dans le mot de passe, seulement le dernier sera modifié en 'a', les autres resteront tels quels.
+2.3) 26^N mots de passe possibles
